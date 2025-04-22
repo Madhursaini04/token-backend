@@ -38,6 +38,11 @@ const upload = multer({ storage });
 
 const SECRET_KEY = "yourSecrhqwghuqgwdyugqyugetKey";
 
+app.get('/', (req, res) => {
+    console.log("home page running")
+    res.send("welcome to home page")
+})
+
 // Register route
 app.post('/register', upload.single('profilepic'), async (req, res) => {
     try {
